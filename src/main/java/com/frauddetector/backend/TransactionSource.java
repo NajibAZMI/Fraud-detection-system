@@ -1,6 +1,7 @@
 package com.frauddetector.backend;
 import org.apache.flink.streaming.api.functions.source.SourceFunction;
 import java.util.Random;
+import com.frauddetector.frontend.models.Transaction;
 public class TransactionSource implements SourceFunction<Transaction> {
     private volatile boolean running = true;
     private Random random = new Random();

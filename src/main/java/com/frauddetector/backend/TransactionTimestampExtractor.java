@@ -1,5 +1,5 @@
 package com.frauddetector.backend;
-
+import com.frauddetector.frontend.models.Transaction;
 import org.apache.flink.api.common.eventtime.*;
 import java.time.Duration;
 public class TransactionTimestampExtractor implements WatermarkStrategy<Transaction> {
