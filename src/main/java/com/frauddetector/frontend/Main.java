@@ -1,4 +1,3 @@
-
 package com.frauddetector.frontend;
 import com.frauddetector.backend.FraudDetectionJob;
 import javafx.application.Application;
