@@ -11,7 +11,7 @@
 
     <properties>
         <java.version>21</java.version>
-        <javafx.version>21</javafx.version>
+        <javafx.version>20.0.1</javafx.version>
         <flink.version>1.17.0</flink.version>
     </properties>
     <dependencies>

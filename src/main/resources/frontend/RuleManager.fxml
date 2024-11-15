@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.geometry.Insets?>
+<AnchorPane xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.frauddetector.frontend.controllers.RuleManagerController">
+    <children>
+        <TableView fx:id="ruleTable" layoutX="10" layoutY="10" prefWidth="780"
+                   prefHeight="500">
+            <columns>
+                <TableColumn fx:id="aggregationFunctionColumn" text="Aggregation Function"
+                             prefWidth="120"/>
+                <TableColumn fx:id="fieldColumn" text="Field" prefWidth="120"/>
+                <TableColumn fx:id="operatorColumn" text="Operator" prefWidth="100"/>
+                <TableColumn fx:id="thresholdColumn" text="Threshold" prefWidth="100"/>
+                <TableColumn fx:id="timeWindowColumn" text="Time Window" prefWidth="100"/>
+                <TableColumn fx:id="windowTypeColumn" text="Window Type" prefWidth="100"/>
+                <TableColumn fx:id="groupingKeyColumn" text="Grouping Key"
+                             prefWidth="120"/>
+                <TableColumn fx:id="activeColumn" text="Active" prefWidth="80"/>
+            </columns>
+        </TableView>
+        <HBox spacing="10" layoutX="10" layoutY="520">
+            <children>
+                <Button fx:id="addRuleButton" text="Add Rule" onAction="#handleAddRule"/>
+                <Button fx:id="editRuleButton" text="Edit Rule"
+                        onAction="#handleEditRule"/>
+                <Button fx:id="deleteRuleButton" text="Delete Rule"
+                        onAction="#handleDeleteRule"/>
+                <Button fx:id="toggleActiveButton" text="Toggle Active"
+                        onAction="#handleToggleActive"/>
+            </children>
+            <padding>
+                <Insets top="10" right="10" bottom="10" left="10"/>
+            </padding>
+        </HBox>
+    </children>
+</AnchorPane>
