@@ -3,6 +3,6 @@ module org.example.frauddetectionsystem {
     requires javafx.fxml;
 
 
-    opens org.example.frauddetectionsystem to javafx.fxml;
-    exports org.example.frauddetectionsystem;
+    opens org.example.frauddetector to javafx.fxml;
+    exports org.example.frauddetector;
 }

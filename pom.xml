@@ -61,7 +61,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                org.example.frauddetectionsystem/org.example.frauddetectionsystem.HelloApplication
+                                org.example.frauddetectionsystem/org.example.frauddetector.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>
