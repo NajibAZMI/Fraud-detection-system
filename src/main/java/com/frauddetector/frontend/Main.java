@@ -1,9 +1,13 @@
 package com.frauddetector.frontend;
 import com.frauddetector.backend.FraudDetectionJob;
+import com.frauddetector.backend.TransactionSource;
+import com.frauddetector.frontend.models.Transaction;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
+import org.apache.flink.streaming.api.datastream.DataStream;
+
 public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception {
@@ -13,7 +17,6 @@ public class Main extends Application {
         primaryStage.setTitle("Real-Time Fraud Detection System");
         primaryStage.setScene(scene);
         primaryStage.show();
-        // Initialize backend in a separate thread
         new Thread(() -> {
             try {
                 FraudDetectionJob.main(new String[]{});

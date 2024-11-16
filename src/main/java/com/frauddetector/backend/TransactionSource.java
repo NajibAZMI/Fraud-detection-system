@@ -14,6 +14,7 @@ public class TransactionSource implements SourceFunction<Transaction> {
             String[] types = {"WIRE", "CREDIT", "DEBIT"};
             String transactionType = types[random.nextInt(types.length)];
             Transaction transaction = new Transaction(payerId, amount, beneficiaryId,transactionType);
+
             ctx.collect(transaction);
             Thread.sleep(100); // Emit transactions every 100 ms
         }
